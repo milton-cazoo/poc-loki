@@ -13,6 +13,6 @@ jobs:
       - name: Install and Build
         run: |
           npm ci
-          npm run build-storybook
+          npm run build-storybook --quiet
       - name: Visual regression
-        run: npx loki --requireReference --reactUri file:./storybook-static
+        run: npx loki test --requireReference --reactUri file:./storybook-static
