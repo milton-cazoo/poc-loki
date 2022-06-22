@@ -1,8 +1,11 @@
-name: Loki
+name: Percy
 on:
   push:
     branches:
       - main
+
+env:
+  PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
 
 jobs:
   build-and-deploy:
@@ -15,4 +18,4 @@ jobs:
           npm ci
           npm run build-storybook --quiet
       - name: Visual regression
-        run: npx loki test --requireReference --reactUri file:./storybook-static
+        run: npx percy storybook ./storybook-static
