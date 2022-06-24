@@ -70,7 +70,7 @@
     "@storybook/testing-library": "^0.0.13",
     "axe-playwright": "^1.1.11",
     "babel-plugin-named-exports-order": "^0.0.2",
-    "jest": "^28.1.1",
+    "jest": "^27.5.1",
     "loki": "^0.30.3",
     "prop-types": "^15.8.1",
     "webpack": "^5.73.0"
